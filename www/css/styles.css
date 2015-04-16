@@ -180,3 +180,7 @@ input[type=checkbox]:checked + label:after {
   text-align: center;
   color: #999;
 }
+
+p.loader{
+  color: #999;
+}
