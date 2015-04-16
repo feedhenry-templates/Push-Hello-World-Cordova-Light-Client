@@ -1,8 +1,11 @@
 var app = {
+  messages: [],
   categories: [],
+  messageTemplate: null,
   initialize: function () {
     var source = document.getElementById('category-template').innerText;
     var template = Handlebars.compile(source);
+    this.messageTemplate = Handlebars.compile(document.getElementById('messageTemplate').innerText);
     $fh.cloud({
       path: '/api/',
       method: 'GET'
@@ -51,5 +54,7 @@ var app = {
   },
 
   onNotification: function (event) {
+    this.messages.push({date: new Date(), alert: event.alert});
+    document.getElementById('messages').innerHTML = this.messageTemplate({messages: this.messages});
   }
 };

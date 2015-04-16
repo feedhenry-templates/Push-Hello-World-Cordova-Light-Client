@@ -21,35 +21,10 @@
     </nav>
 
     <div class="message-feed" id="messages">
-
-      <div class="message">
-        <h4>June 23th, 13:09pm</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div><!-- /message-->
-
-      <div class="message">
-        <h4>June 23th, 13:09pm</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div><!-- /message-->
-
-      <div class="message">
-        <h4>June 23th, 13:09pm</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div><!-- /message-->
-      <div class="message">
-        <h4>June 23th, 13:09pm</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div><!-- /message-->
-      <div class="message">
-        <h4>June 23th, 13:09pm</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div><!-- /message-->
-
-      <div class="message">
-        <h4>June 23th, 13:09pm</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div><!-- /message-->
-
+      <div class="blank-slate">
+        <i class="fa fa-paper-plane fa-3x"></i>
+        <p>No push notifications yet</p>
+      </div><!-- /blank-slate -->
     </div>
 
     <form action="#" id="categories" style="display: none">
@@ -64,11 +39,25 @@
 
     <script src="js/lib/feedhenry.js"></script>
     <script src="js/lib/handlebars-v3.0.1.js"></script>
+    <script src="http://momentjs.com/downloads/moment.js"></script>
+    <script type="application/javascript">
+      Handlebars.registerHelper("prettifyDate", function(timestamp) {
+        return moment(timestamp).format('dddd DD.MM.YYYY HH:mm');
+      });
+    </script>
     <script id="category-template" type="text/x-handlebars-template">
       {{#each categories}}
       <div class="category">
         <input type="checkbox" id="{{this}}" onchange="app.selectionChanged(this)"/>
         <label for="{{this}}">{{this}}</label>
+      </div>
+      {{/each}}
+    </script>
+    <script id="messageTemplate" type="text/x-handlebars-template">
+      {{#each messages}}
+      <div class="message">
+        <h4>{{prettifyDate date}}</h4>
+        <p>{{alert}}</p>
       </div>
       {{/each}}
     </script>
