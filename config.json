@@ -1,0 +1,8 @@
+{
+  "plugins": [
+    {
+      "id": "org.jboss.aerogear.cordova.push",
+      "version": "1.0.2"
+    }
+  ]
+}
