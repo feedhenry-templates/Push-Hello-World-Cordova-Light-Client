@@ -12,7 +12,7 @@ var app = {
     });
   },
 
-  selectionChanged: function(option) {
+  selectionChanged: function (option) {
     if (option.checked) {
       var that = this;
       that.categories.push(option.id);
@@ -20,16 +20,34 @@ var app = {
       ajax({
         url: "push-config.json",
         dataType: "text"
-      }).then(function(result) {
+      }).then(function (result) {
         var pushConfig = JSON.parse(result.data);
         pushConfig.categories = that.categories;
-        push.register(this.onNotification, function() {
+        push.register(this.onNotification, function () {
           console.log('registration done');
         });
       });
     } else {
       this.categories.splice(this.categories.indexOf(option.id), 1);
     }
+  },
+
+  toggleTabs: function (message) {
+    function toggle(id, show) {
+      var e = document.getElementById(id);
+      var tab = document.getElementById(id + 'Tab');
+      if (show) {
+        e.style.display = 'block';
+        tab.setAttribute('class', 'active');
+      }
+      else {
+        e.style.display = 'none';
+        tab.removeAttribute('class');
+      }
+    }
+
+    toggle('messages', message);
+    toggle('categories', !message);
   },
 
   onNotification: function (event) {
