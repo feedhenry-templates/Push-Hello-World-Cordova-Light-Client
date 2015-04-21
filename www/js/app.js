@@ -6,6 +6,7 @@ var app = (function () {
   function onNotification(event) {
     messages.push({date: new Date(), alert: event.alert});
     document.getElementById('messages').innerHTML = messageTemplate({messages: messages});
+    app.toggleTabs(true);
   }
 
   return {
@@ -33,6 +34,8 @@ var app = (function () {
           pushConfig.categories = categories;
           push.register(onNotification, function () {
             console.log('registration done');
+          }, function (err) {
+            alert(err);
           }, pushConfig);
         });
       } else {
