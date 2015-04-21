@@ -2,8 +2,8 @@
     "pushServerURL": "https://unifiedpush-edewit.rhcloud.com/ag-push/",
     "android": {
         "senderID": "517285908032",
-        "variantID": "ff91bf70-0aad-4538-9063-26b7b758662b",
-        "variantSecret": "635aba3a-288b-40c7-ac41-49e9deb63767"
+        "variantID": "a29aab81-e4ac-4c51-a07f-529b9c59b98f",
+        "variantSecret": "ed1ee4f1-e4d1-49d4-b687-d7dbf0e644ed"
     },
     "ios": {
         "variantID": "115fe48a-caaa-4bc7-b052-9755ac13fc94",
