@@ -7,7 +7,7 @@ var app = {
     var template = Handlebars.compile(source);
     this.messageTemplate = Handlebars.compile(document.getElementById('messageTemplate').innerText);
     $fh.cloud({
-      path: '/api/',
+      path: '/category/',
       method: 'GET'
     }, function (res) {
       var html = template({categories: res.data});
