@@ -1,16 +1,16 @@
 {
-    "pushServerURL": "https://unifiedpush-edewit.rhcloud.com/ag-push/",
+    "pushServerURL": "",
     "android": {
-        "senderID": "517285908032",
-        "variantID": "e1804354-85f2-4b62-8a9a-bb0a0d381e27",
-        "variantSecret": "1df98e9c-aff0-4312-957b-0a9a5644bd06"
+        "senderID": "",
+        "variantID": "",
+        "variantSecret": ""
     },
     "ios": {
-        "variantID": "115fe48a-caaa-4bc7-b052-9755ac13fc94",
-        "variantSecret": "7b9c4c4d-289c-4622-99cf-7c72d0202046"
+        "variantID": "",
+        "variantSecret": ""
     },
     "windows": {
-      "variantID": "c93fa2a7-70bb-4d34-a308-e0c0a688e6aa",
-      "variantSecret": "fad4c664-1dd3-480a-b966-2a7e9c826af1"
+      "variantID": "",
+      "variantSecret": ""
     }
 }
