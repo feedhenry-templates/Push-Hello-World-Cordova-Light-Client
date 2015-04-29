@@ -11,9 +11,8 @@ var app = (function () {
 
   return {
     initialize: function () {
-      var source = document.getElementById('category-template').innerText;
-      var template = Handlebars.compile(source);
-      messageTemplate = Handlebars.compile(document.getElementById('messageTemplate').innerText);
+      var template = Handlebars.compile(document.querySelector('#category-template').innerHTML);
+      messageTemplate = Handlebars.compile(document.querySelector('#messageTemplate').innerHTML);
       $fh.cloud({
         path: '/category/',
         method: 'GET'
