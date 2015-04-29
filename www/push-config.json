@@ -1,12 +1,16 @@
 {
-    "pushServerURL": "https://ups-edewit.rhcloud.com/ag-push/",
+    "pushServerURL": "",
     "android": {
-        "senderID": "517285908032",
-        "variantID": "0cd33668-f349-46c7-b1b1-a9b1cbef2336",
-        "variantSecret": "88244a49-3e1d-4e5e-aa60-a35df690ddc6"
+        "senderID": "",
+        "variantID": "",
+        "variantSecret": ""
     },
     "ios": {
-        "variantID": "2e032202-4aff-4ac1-a842-84fb1c53f7ea",
-        "variantSecret": "840af5c6-d570-47b1-8434-a643c6fc8d96"
+        "variantID": "",
+        "variantSecret": ""
+    },
+    "windows": {
+      "variantID": "",
+      "variantSecret": ""
     }
 }
