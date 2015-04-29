@@ -8,9 +8,5 @@
     "ios": {
         "variantID": "",
         "variantSecret": ""
-    },
-    "windows": {
-      "variantID": "",
-      "variantSecret": ""
     }
 }
