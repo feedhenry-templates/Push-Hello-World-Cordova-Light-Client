@@ -2,7 +2,8 @@
   "plugins": [
     {
       "id": "org.jboss.aerogear.cordova.push",
-      "version": "1.0.2"
+      "version": "1.0.4",
+      "url": "https://github.com/aerogear/aerogear-cordova-push#1.0.4"
     }
   ]
 }
