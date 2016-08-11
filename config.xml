@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="org.jboss.aerogear.cordova" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Push Hello World</name>
+    <description>
+        This is a sample application that serves as a client application for subscribing to existing categories and receiving messages via push notifications in the Hello World Push Template example application.
+    </description>
+    <author email="aerogear-users@lists.jboss.org" href="http://aerogear.org">
+        Aerogear Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <engine name="android"/>
+    <engine name="ios"/>
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+    <plugin name="cordova-plugin-whitelist"/>
+    <plugin name="aerogear-cordova-push" spec="https://github.com/feedhenry/aerogear-cordova-push#no-dupe-permission"/>
+</widget>
